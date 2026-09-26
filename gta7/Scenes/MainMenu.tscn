@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c55gtbsv60521"]
+[gd_scene load_steps=2 format=3 uid="uid://c55gtbsv60521"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_s2qxr"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +9,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_s2qxr")
+
+[node name="Hello World" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 222.0
+offset_top = 130.0
+offset_right = 440.0
+offset_bottom = 218.0
