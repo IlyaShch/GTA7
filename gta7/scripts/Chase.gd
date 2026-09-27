@@ -33,6 +33,10 @@ const CROWD_GAP_LOSS_PER_FAIL := 150.0
 const MIN_CROWD_GAP := 60.0
 
 func _ready():
+	# Loop the chase music for the whole scene instead of playing once and stopping
+	var chasing_music = $ChasingMusic
+	chasing_music.finished.connect(chasing_music.play)
+
 	# var bg_texture = load("res://assets/backgrounds/Chase.png")
 	# background_width = bg_texture.get_width()
 
