@@ -21,6 +21,8 @@ func _ready():
 
 	add_child(stableButton)
 
+	_start_button_bob(stableButton)
+
 	_setup_title_gif()
 
 
@@ -77,3 +79,11 @@ func _on_stable_button_hover(button: TextureButton, is_hovering: bool):
 	var target_scale = Vector2(1.15, 1.15) if is_hovering else Vector2(1, 1)
 	var hover_tween = create_tween()
 	hover_tween.tween_property(button, "scale", target_scale, 0.15).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+
+
+func _start_button_bob(button: TextureButton):
+	var base_y = button.position.y
+	var bob_tween = create_tween()
+	bob_tween.set_loops()
+	bob_tween.tween_property(button, "position:y", base_y - 20, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	bob_tween.tween_property(button, "position:y", base_y, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
