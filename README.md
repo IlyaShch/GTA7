@@ -1,4 +1,5 @@
 <img width="1167" height="878" alt="title_screen" src="https://github.com/user-attachments/assets/5cf40208-5d25-454f-aafd-f76827a9db40" />
+
 ## Inspiration
 The release date for GTA 6 is getting closer. The theme “Royalty” made us wonder: what if the king was the person you stole? Our idea started with a runaway knight stealing a horse and evolved into a medieval kidnapping gone wrong.
  
