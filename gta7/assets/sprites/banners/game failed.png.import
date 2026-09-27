@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm127xwcwbgpw"
-path="res://.godot/imported/crowdchasinganimated.png-fbb0744784d4b5de25359d72be86e719.ctex"
+uid="uid://6ofodps1r3oi"
+path="res://.godot/imported/game failed.png-f3571ef4dcf448a18fad3e8b4421be49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Chasing/crowdchasinganimated.png"
-dest_files=["res://.godot/imported/crowdchasinganimated.png-fbb0744784d4b5de25359d72be86e719.ctex"]
+source_file="res://assets/sprites/banners/game failed.png"
+dest_files=["res://.godot/imported/game failed.png-f3571ef4dcf448a18fad3e8b4421be49.ctex"]
 
 [params]
 
