@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnsxv4vcb04mq"]
+
+[ext_resource type="Script" path="res://scripts/Chase.gd" id="1_jni82"]
+[ext_resource type="Texture2D" uid="uid://btxdk33k2kdvd" path="res://assets/backgrounds/Chase.png" id="2_qrqmh"]
+
+[node name="Chase" type="Node2D"]
+script = ExtResource("1_jni82")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Chase"
+
+[node name="Back" type="TextureRect" parent="."]
+offset_right = 1851.0
+offset_bottom = 646.0
+texture = ExtResource("2_qrqmh")
