@@ -1,17 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnsxv4vcb04mq"]
+[gd_scene format=3 uid="uid://dnsxv4vcb04mq"]
 
-[ext_resource type="Script" path="res://scripts/Chase.gd" id="1_jni82"]
-[ext_resource type="Texture2D" uid="uid://btxdk33k2kdvd" path="res://assets/backgrounds/Chase.png" id="2_qrqmh"]
+[ext_resource type="Script" uid="uid://bun6geqxvi17n" path="res://scripts/Chase.gd" id="1_jni82"]
+[ext_resource type="Texture2D" uid="uid://btxdk33k2kdvd" path="res://assets/backgrounds/Chase.png" id="2_y8sbs"]
+[ext_resource type="AudioStream" uid="uid://syoogbk0tiju" path="res://assets/music/chasing_mus.wav" id="3_y8sbs"]
+[ext_resource type="Script" uid="uid://cpdq6qt5oqj3i" path="res://scripts/KingQTE.gd" id="4_wqggw"]
+[ext_resource type="AudioStream" uid="uid://dboxtd2us0eo0" path="res://assets/music/QTE.wav" id="5_a262h"]
 
-[node name="Chase" type="Node2D"]
+[node name="Chase" type="Node2D" unique_id=2104592589]
 script = ExtResource("1_jni82")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1773175008]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Chase"
 
-[node name="Back" type="TextureRect" parent="."]
+[node name="Back" type="TextureRect" parent="." unique_id=1921891250]
 offset_right = 1851.0
 offset_bottom = 646.0
-texture = ExtResource("2_qrqmh")
+texture = ExtResource("2_y8sbs")
+
+[node name="KingQTE" type="Node2D" parent="." unique_id=21396561 node_paths=PackedStringArray("chase_music")]
+script = ExtResource("4_wqggw")
+qte_music = ExtResource("5_a262h")
+chase_music = NodePath("../ChasingMusic")
+duration = 10.0
+first_delay = 6.699999999999999
+between_rounds = 6.699999999999999
+music_volume_db = -15.18
+
+[node name="ChasingMusic" type="AudioStreamPlayer" parent="." unique_id=1229272914]
+stream = ExtResource("3_y8sbs")
+volume_db = -9.155
+autoplay = true
