@@ -7,14 +7,17 @@ var gif_frame_index: int = 0
 var gif_display: TextureRect
 
 func _ready():
-	var label = Label.new()
-	label.text = "My Horse Game"
-	label.position = Vector2(100, 100)
-	add_child(label)
-	var stableButton = Button.new()
-	stableButton.text = "Enter The Stable"
-	stableButton.position =Vector2(100, 200)
-	stableButton.pressed.connect(_on_stable_button_pressed)	
+	
+	var stableButton = TextureButton.new()
+	stableButton.texture_normal = load("res://assets/sprites/Button/play_button.png")
+	stableButton.ignore_texture_size = true
+	stableButton.stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED
+	stableButton.position = Vector2(550, 200)
+	stableButton.size = Vector2(640, 260)
+	stableButton.pivot_offset = stableButton.size / 2.0
+	stableButton.pressed.connect(_on_stable_button_pressed)
+	stableButton.mouse_entered.connect(_on_stable_button_hover.bind(stableButton, true))
+	stableButton.mouse_exited.connect(_on_stable_button_hover.bind(stableButton, false))
 
 	add_child(stableButton)
 
@@ -68,3 +71,9 @@ func _process(delta: float) -> void:
 func _on_stable_button_pressed():
 	print("button pressed")
 	open_stable.emit()
+
+
+func _on_stable_button_hover(button: TextureButton, is_hovering: bool):
+	var target_scale = Vector2(1.15, 1.15) if is_hovering else Vector2(1, 1)
+	var hover_tween = create_tween()
+	hover_tween.tween_property(button, "scale", target_scale, 0.15).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
