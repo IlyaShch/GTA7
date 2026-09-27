@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ftll57ftbvji"
-path="res://.godot/imported/player_stand.png-9f8b03298b1970602dd5302caf8dc248.ctex"
+uid="uid://bf2dkm71ikqqy"
+path="res://.godot/imported/15.jpg-d100893fe761139b699239c8c4984a4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Player/player_stand.png"
-dest_files=["res://.godot/imported/player_stand.png-9f8b03298b1970602dd5302caf8dc248.ctex"]
+source_file="res://assets/fonts/highcrest-personal-use/15.jpg"
+dest_files=["res://.godot/imported/15.jpg-d100893fe761139b699239c8c4984a4a.ctex"]
 
 [params]
 
